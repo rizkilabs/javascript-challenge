@@ -1,12 +1,21 @@
 // Cek angka ganjil atau genap
-const angka = 7;
+const readline = require("readline");
 
-let hasil;
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
 
-if (angka % 2 === 0) {
-  hasil = "genap";
-} else {
-  hasil = "ganjil";
-}
+rl.question("Masukkan sebuah angka: ", (input) => {
+  const angka = Number(input);
 
-console.log("Angka yang dicek:", angka);
+  if (input.trim() === "" || !Number.isInteger(angka)) {
+    console.log("Input tidak valid, masukkan bilangan bulat.");
+  } else if (angka % 2 === 0) {
+    console.log(`${angka} adalah angka genap`);
+  } else {
+    console.log(`${angka} adalah angka ganjil`);
+  }
+
+  rl.close();
+});
