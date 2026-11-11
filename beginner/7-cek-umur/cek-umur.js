@@ -1,5 +1,5 @@
 // Cek umur
-const umur = 15;
+const umur = 18;
 
 if (umur < 13) {
   console.log("Anak-anak");
