@@ -1,10 +1,9 @@
-// Cek umur
-const umur = 18;
-
-if (umur < 13) {
-  console.log("Anak-anak");
-} else if (umur >= 13 && umur <= 17) {
-  console.log("Remaja");
-} else {
-  console.log("Dewasa");
+function cekUmur(umur) {
+  if (umur < 13) return "Anak-anak";
+  if (umur <= 17) return "Remaja";
+  return "Dewasa";
 }
+
+console.log(cekUmur(5)); // Anak-anak
+console.log(cekUmur(15)); // Remaja
+console.log(cekUmur(25)); // Dewasa
