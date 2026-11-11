@@ -1,19 +1,41 @@
 // Menentukan nilai ujian
-const nilai = 75;
 
-let grade;
+function tentukanGrade(nilai) {
+  // Validasi input
+  if (typeof nilai !== "number" || Number.isNaN(nilai)) {
+    return "Error: nilai harus berupa angka";
+  }
+  if (nilai < 0 || nilai > 100) {
+    return "Error: nilai harus antara 0 sampai 100";
+  }
 
-if (nilai >= 90 && nilai <= 100) {
-  grade = "A";
-} else if (nilai >= 80 && nilai <= 89) {
-  grade = "B";
-} else if (nilai >= 70 && nilai <= 79) {
-  grade = "C";
-} else if (nilai >= 60 && nilai <= 69) {
-  grade = "D";
-} else if (nilai < 60) {
-  grade = "E";
+  // Tentukan grade
+  if (nilai >= 90) return "A";
+  if (nilai >= 80) return "B";
+  if (nilai >= 70) return "C";
+  if (nilai >= 60) return "D";
+  return "E";
 }
 
-console.log("Nilai:", nilai);
-console.log("Grade:", grade);
+// Testing
+const daftarNilai = [
+  100,
+  95,
+  90,
+  89.5,
+  85,
+  80,
+  75,
+  70,
+  65,
+  60,
+  59,
+  0,
+  -5,
+  105,
+  "abc",
+];
+
+for (const nilai of daftarNilai) {
+  console.log(`Nilai ${nilai} => ${tentukanGrade(nilai)}`);
+}
