@@ -1,9 +1,8 @@
-const angka = 0;
-
-if (angka > 0) {
-  console.log(angka + " adalah bilangan positif");
-} else if (angka < 0) {
-  console.log(angka + " adalah bilangan negatif");
-} else {
-  console.log(angka + " adalah nol");
+function cekBilangan(angka) {
+  if (angka > 0) return "positif";
+  if (angka < 0) return "negatif";
+  return "nol";
 }
+
+const angka = -3;
+console.log(`${angka} adalah bilangan ${cekBilangan(angka)}`);
