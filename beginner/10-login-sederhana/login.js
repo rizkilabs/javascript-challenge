@@ -1,7 +1,13 @@
 // Data login yang ditentukan
-const dataUsername = "admin";
-const dataPassword = "12345";
+const dataUsername = "salah";
+const dataPassword = "salah";
 
 // Input dari pengguna (sementara di-hardcode)
 let username = "admin";
 let password = "12345";
+
+if (username === dataUsername && password === dataPassword) {
+  console.log("Login berhasil");
+} else {
+  console.log("Login gagal");
+}
