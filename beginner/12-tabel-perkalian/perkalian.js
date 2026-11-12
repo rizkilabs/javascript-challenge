@@ -1,3 +1,5 @@
-console.log("5 x 1 = " + 5 * 1);
-console.log("5 x 2 = " + 5 * 2);
-console.log("5 x 3 = " + 5 * 3);
+const angka = 5;
+
+for (let i = 1; i <= 10; i++) {
+  console.log(`${angka} x ${i} = ${angka * i}`);
+}
