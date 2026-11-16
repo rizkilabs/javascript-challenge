@@ -7,3 +7,6 @@ for (let i = 1; i < angka.length; i++) {
     terbesar = angka[i];
   }
 }
+
+console.log("Array:", angka);
+console.log("Angka terbesar:", terbesar);
