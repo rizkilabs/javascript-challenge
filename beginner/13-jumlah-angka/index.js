@@ -4,4 +4,4 @@ for (let i = 1; i <= 100; i++) {
   total += i;
 }
 
-console.log(total);
+console.log("Jumlah total angka dari 1 sampai 100 =", total);
