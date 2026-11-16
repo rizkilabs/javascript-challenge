@@ -4,3 +4,8 @@ function cekAngka(angka) {
   }
   return "Ganjil";
 }
+
+console.log(cekAngka(4)); // Genap
+console.log(cekAngka(7)); // Ganjil
+console.log(cekAngka(0)); // Genap
+console.log(cekAngka(-3)); // Ganjil
