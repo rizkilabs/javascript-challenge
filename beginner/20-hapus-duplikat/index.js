@@ -10,3 +10,6 @@ for (let i = 0; i < angka.length; i++) {
 }
 
 console.log("Array tanpa duplikat:", tanpaDuplikat);
+
+const cara2 = [...new Set(angka)];
+console.log("Pakai Set:", cara2);
