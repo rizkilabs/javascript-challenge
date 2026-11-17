@@ -19,9 +19,31 @@ function bagi(a, b) {
   return a / b;
 }
 
-// Tes sementara
-console.log(tambah(5, 3)); // 8
-console.log(kurang(5, 3)); // 2
-console.log(kali(5, 3)); // 15
-console.log(bagi(6, 3)); // 2
-console.log(bagi(6, 0)); // Error: tidak bisa membagi dengan nol
+function hitung(a, b, operator) {
+  switch (operator) {
+    case "+":
+      return tambah(a, b);
+    case "-":
+      return kurang(a, b);
+    case "*":
+      return kali(a, b);
+    case "/":
+      return bagi(a, b);
+    default:
+      return "Error: operator tidak valid (gunakan + - * /)";
+  }
+}
+
+// Program utama: node kalkulator.js <angka1> <operator> <angka2>
+const angka1 = Number(process.argv[2]);
+const operator = process.argv[3];
+const angka2 = Number(process.argv[4]);
+
+if (isNaN(angka1) || isNaN(angka2)) {
+  console.log("Error: masukkan dua angka yang valid");
+  console.log("Contoh: node kalkulator.js 10 + 5");
+} else {
+  console.log(
+    `${angka1} ${operator} ${angka2} = ${hitung(angka1, angka2, operator)}`,
+  );
+}
