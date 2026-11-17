@@ -1,7 +1,3 @@
-let total = 0;
+const nilaiUjian = [80, 75, 90, 85, 70];
 
-for (let i = 0; i < nilaiUjian.length; i++) {
-  total += nilaiUjian[i];
-}
-
-console.log("Total nilai:", total);
+console.log("Nilai ujian:", nilaiUjian);
