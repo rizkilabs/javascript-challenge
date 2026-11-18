@@ -20,7 +20,7 @@ function tampilkanTugas() {
   }
 }
 
-// Menghapus tugas berdasarkan nomor (sesuai yang tampil di daftar)
+// Menghapus tugas berdasarkan nomor
 function hapusTugas(nomor) {
   const index = nomor - 1;
 
@@ -33,6 +33,9 @@ function hapusTugas(nomor) {
   console.log(`Tugas "${dihapus}" dihapus.`);
 }
 
+// ===== Tes =====
+tampilkanTugas(); // masih kosong
+
 tambahTugas("Belajar JavaScript");
 tambahTugas("Push ke GitHub");
 tambahTugas("Kerjakan tugas Express");
@@ -42,3 +45,7 @@ hapusTugas(2);
 tampilkanTugas();
 
 hapusTugas(10); // nomor tidak ada
+
+hapusTugas(1);
+hapusTugas(1);
+tampilkanTugas(); // kosong lagi
