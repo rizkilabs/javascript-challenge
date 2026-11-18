@@ -1,0 +1,14 @@
+{
+  "name": "22-diskon-belanja",
+  "version": "1.0.0",
+  "description": "- Total belanja ≥ Rp100.000 → diskon 10%\r - Total belanja ≥ Rp200.000 → diskon 20%\r - Menampilkan total sebelum dan sesudah diskon",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node --test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
