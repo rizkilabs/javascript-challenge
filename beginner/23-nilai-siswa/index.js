@@ -22,4 +22,8 @@ const siswaDenganStatus = siswa.map((s) => ({
   status: tentukanStatus(s.nilai),
 }));
 
-console.log(siswaDenganStatus);
+// Tampilkan nama, nilai, dan status setiap siswa
+console.log("=== Daftar Nilai Siswa ===");
+for (const s of siswaDenganStatus) {
+  console.log(`Nama: ${s.nama} | Nilai: ${s.nilai} | Status: ${s.status}`);
+}
