@@ -15,8 +15,8 @@ Aplikasi sederhana untuk menghitung diskon belanja dan menampilkan total sebelum
 Pastikan Node.js sudah terpasang, lalu:
 
 ```bash
-git clone https://github.com/rizkilabs/diskon-belanja.git
-cd diskon-belanja
+git clone https://github.com/rizkilabs/javascript-challenge.git
+cd beginner/22-diskon-belanja
 node index.js 250000
 ```
 
