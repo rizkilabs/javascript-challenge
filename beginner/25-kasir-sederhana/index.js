@@ -58,5 +58,31 @@ function tampilkanRincian(keranjang) {
   console.log(`Total belanja: ${formatRupiah(hitungTotal(keranjang))}`);
 }
 
+// ---------- TAHAP 3 ----------
+
+// Aturan diskon, urut dari syarat terbesar ke terkecil
+const aturanDiskon = [
+  { minimal: 200000, persen: 20 },
+  { minimal: 100000, persen: 10 },
+];
+
+function hitungDiskon(total) {
+  const aturan = aturanDiskon.find((a) => total >= a.minimal);
+  const persen = aturan ? aturan.persen : 0;
+  const nominal = (total * persen) / 100;
+  return { persen, nominal };
+}
+
+function tampilkanRingkasan(keranjang) {
+  tampilkanRincian(keranjang);
+
+  const total = hitungTotal(keranjang);
+  const diskon = hitungDiskon(total);
+  const totalSetelahDiskon = total - diskon.nominal;
+
+  console.log(`Diskon (${diskon.persen}%): -${formatRupiah(diskon.nominal)}`);
+  console.log(`Total setelah diskon: ${formatRupiah(totalSetelahDiskon)}`);
+}
+
 tampilkanDaftarBarang();
-tampilkanRincian(keranjang);
+tampilkanRingkasan(keranjang);
