@@ -82,7 +82,31 @@ function tampilkanRingkasan(keranjang) {
 
   console.log(`Diskon (${diskon.persen}%): -${formatRupiah(diskon.nominal)}`);
   console.log(`Total setelah diskon: ${formatRupiah(totalSetelahDiskon)}`);
+
+  return totalSetelahDiskon; // <-- baris baru
 }
 
+// ---------- TAHAP 4 ----------
+
+function prosesPembayaran(keranjang, uangBayar) {
+  const totalBayar = tampilkanRingkasan(keranjang);
+
+  console.log("-----------------------");
+  console.log(`Total pembayaran: ${formatRupiah(totalBayar)}`);
+  console.log(`Uang dibayar: ${formatRupiah(uangBayar)}`);
+
+  if (uangBayar < totalBayar) {
+    const kurang = totalBayar - uangBayar;
+    console.log(`Uang kurang: ${formatRupiah(kurang)}. Transaksi gagal.`);
+    return;
+  }
+
+  const kembalian = uangBayar - totalBayar;
+  console.log(`Kembalian: ${formatRupiah(kembalian)}`);
+  console.log("Terima kasih sudah berbelanja!");
+}
+
+const uangBayar = 150000;
+
 tampilkanDaftarBarang();
-tampilkanRingkasan(keranjang);
+prosesPembayaran(keranjang, uangBayar);
