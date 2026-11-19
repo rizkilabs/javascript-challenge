@@ -106,7 +106,18 @@ function prosesPembayaran(keranjang, uangBayar) {
   console.log("Terima kasih sudah berbelanja!");
 }
 
-const uangBayar = 150000;
+// ---------- MAIN ----------
 
-tampilkanDaftarBarang();
-prosesPembayaran(keranjang, uangBayar);
+function main() {
+  const keranjang = [
+    { id: 1, jumlah: 1 }, // Beras 5kg
+    { id: 2, jumlah: 2 }, // Minyak Goreng 1L
+    { id: 5, jumlah: 10 }, // Kopi Sachet
+  ];
+  const uangBayar = 150000;
+
+  tampilkanDaftarBarang();
+  prosesPembayaran(keranjang, uangBayar);
+}
+
+main();
